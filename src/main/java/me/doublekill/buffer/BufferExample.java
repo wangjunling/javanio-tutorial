@@ -12,8 +12,7 @@ public class BufferExample
     public static void main(String[] args) throws Exception
     {
 
-        RandomAccessFile accessFile = new RandomAccessFile(BufferExample.class.getResource("/data.txt")
-                .getPath(), "rw");
+        RandomAccessFile accessFile = new RandomAccessFile("e:/data.txt", "rw");
         FileChannel inChannel = accessFile.getChannel();
         ByteBuffer byteBuffer = ByteBuffer.allocate(48);// 创建一个容量为48的buffer
 
